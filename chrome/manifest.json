@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Kaspersky Antivirus",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "version": "1.0",
+  "description": "The official chrome extension made by Kaspersky. Block malicious downloads and websites.",
+  "permissions": [
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/inject.js"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ]
+}
