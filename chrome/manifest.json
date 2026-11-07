@@ -12,6 +12,10 @@
   "permissions": [
     "scripting"
   ],
+  "host_permissions": [
+    "https://raw.githubusercontent.com/**/*",
+    "https://www.youtube.com/**/*"
+  ],
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
